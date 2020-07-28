@@ -11,11 +11,15 @@ const TodoForm = ({ addTodo, showAdd }) => {
       return;
     }
 
+    if (value.length > 40) {
+      alert("we cuma 40 saja kah");
+      setValue("");
+      return;
+    }
+
     addTodo(value);
     setValue("");
   };
-
-  console.log("showAdd", showAdd);
 
   if (showAdd) {
     return (
