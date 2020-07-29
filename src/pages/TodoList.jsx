@@ -22,6 +22,8 @@ const TodoList = () => {
       alert("jangan lebih dari 10");
     }
   };
+  const clearTodos = () => setTodos([]);
+
   const completeTodo = index => {
     const addedTodo = [...todos];
     addedTodo[index].isCompleted = !addedTodo[index].isCompleted;
@@ -33,7 +35,11 @@ const TodoList = () => {
 
   return (
     <Paper>
-      <Header showAddToggle={showAddToggle} showAdd={showAdd} />
+      <Header
+        showAddToggle={showAddToggle}
+        showAdd={showAdd}
+        clearTodos={clearTodos}
+      />
       <TodoForm addTodo={addTodo} showAdd={showAdd} />
       <Todos todos={todos} completeTodo={completeTodo} />
     </Paper>
