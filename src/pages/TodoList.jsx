@@ -22,7 +22,8 @@ const TodoList = () => {
       alert("jangan lebih dari 10");
     }
   };
-  const clearTodos = () => setTodos([]);
+
+  const clearTodos = () => !showAdd && setTodos([]);
 
   const completeTodo = index => {
     const addedTodo = [...todos];
