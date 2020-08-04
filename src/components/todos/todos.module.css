@@ -1,0 +1,18 @@
+.todos {
+  display: flex;
+  flex-direction: column;
+
+  min-height: 500px;
+}
+
+.todoPlaceholderText {
+  font-family: "Homemade Apple", sans-serif;
+  text-align: center;
+  font-size: 20px;
+  padding: 16px;
+}
+
+.addButtonPlaceholderText {
+  color: var(--main-black-color);
+  font-family: "Bungee", sans-serif;
+}
